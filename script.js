@@ -1,9 +1,8 @@
-const addBook = document.querySelector('#addBook')
+let bookAdder = document.querySelector("#addBook")
+
+bookAdder.addEventListener('click', addBookToLibrary);
 
 
-addBook.addEventListener('click', function(e) {
-    addBookToLibrary();
-})
 
 let myLibrary = [];
 
@@ -13,8 +12,8 @@ function Book(title, author) {
 }
 
 function addBookToLibrary() {
-    let title = document.getElementById("#book_title").value;
-    let author = document.getElementById("#book_author").value;
+    let bookTitle = document.querySelector("#book_title").value;
+    let bookAuthor = document.querySelector("#book_author").value;
     
-    console.log(author);
+    
 }

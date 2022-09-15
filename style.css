@@ -10,3 +10,10 @@ body {
     width: 1000px;
     border: 2px solid gray;
 }
+
+.article {
+    width: 1000px;
+    height: 100px;
+    background-color: blue;
+
+}

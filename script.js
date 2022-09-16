@@ -25,14 +25,34 @@ function addBookToLibrary() {
 
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
-        console.log(myLibrary[i].title);
+
+
+        let bookCard = document.createElement("div");
+        bookCard.className = "bookCard" 
+        document.querySelector(".container").appendChild(bookCard);
+
+
         let bookTitle = document.createElement("div");
         bookTitle.className = "bookTitle"
         bookTitle.innerHTML = myLibrary[i].title 
-        document.querySelector(".container").appendChild(bookTitle);
+        document.querySelector(".bookCard").appendChild(bookTitle);
+
         let bookAuthor = document.createElement("div");
         bookAuthor.className = "bookAuthor"
         bookAuthor.innerHTML = myLibrary[i].author
-        document.querySelector(".container").appendChild(bookAuthor);
+        document.querySelector(".bookCard").appendChild(bookAuthor);
+
+        let readDiv = document.createElement("div");
+        readDiv.className = "readDiv"
+        document.querySelector(".bookCard").appendChild(readDiv);
+
+        let readStatus = document.createElement("input");
+        readStatus.setAttribute("type", "checkbox");
+        readStatus.querySelector(".readDiv").appendChild(readStatus);
+
+        let removeBook = document.createElement("button");
+        removeBook.className = "removeBook"
+        removeBook.innerHTML = "Remove"
+        document.querySelector(".bookCard").appendChild(removeBook);
     }
 }

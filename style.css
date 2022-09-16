@@ -10,6 +10,13 @@ body {
     width: 1000px;
     border: 2px solid gray;
     display: flex;
+    flex-direction: column;
+}
+
+.bookCard {
+    height: 100px;
+    width: 1000px;
+    display: flex;
 }
 
 .information {
@@ -21,6 +28,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .bookTitle {
     width: 260px;
@@ -35,6 +43,12 @@ body {
     background-color: green;
 }
 
+.readDiv {
+    width: 250px;
+    height: 100px;
+    background-color: yellow;
+}
+
 .author {
     padding-right: 60px;
 }
@@ -45,4 +59,10 @@ body {
 
 .read {
     padding-left: 30px;
+}
+
+.removeBook {
+    width: 20px;
+    height: 50px;
+    background-color: purple;
 }

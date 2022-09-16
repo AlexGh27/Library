@@ -4,7 +4,7 @@ bookAdder.addEventListener('click', addBookToLibrary);
 
 
 
-let myLibrary = [{title: 'asd', author: 'dsa'}];
+let myLibrary = [];
 
 function Book(title, author) {
     this.title = title;
@@ -26,12 +26,13 @@ function addBookToLibrary() {
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         console.log(myLibrary[i].title);
-        let article = document.createElement("div");
-        article.className = "article"
-        article.style.width = "1000px";
-        article.style.height = "100px";
-        
-        article.innerHTML = myLibrary[i].title
-        document.querySelector(".container").appendChild(article);
+        let bookTitle = document.createElement("div");
+        bookTitle.className = "bookTitle"
+        bookTitle.innerHTML = myLibrary[i].title 
+        document.querySelector(".container").appendChild(bookTitle);
+        let bookAuthor = document.createElement("div");
+        bookAuthor.className = "bookAuthor"
+        bookAuthor.innerHTML = myLibrary[i].author
+        document.querySelector(".container").appendChild(bookAuthor);
     }
 }

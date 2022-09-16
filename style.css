@@ -9,11 +9,40 @@ body {
     height: 800px;
     width: 1000px;
     border: 2px solid gray;
+    display: flex;
 }
 
-.article {
+.information {
+    height: 30px;
     width: 1000px;
+    background-color: red;
+    display: flex;
+    gap: 110px;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookTitle {
+    width: 260px;
     height: 100px;
     background-color: blue;
 
+}
+
+.bookAuthor {
+    width: 250px;
+    height: 100px;
+    background-color: green;
+}
+
+.author {
+    padding-right: 60px;
+}
+
+.title {
+    padding-right: 90px;
+}
+
+.read {
+    padding-left: 30px;
 }

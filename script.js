@@ -21,43 +21,45 @@ function addBookToLibrary() {
     document.querySelector("#book_title").value = "";
     document.querySelector("#book_author").value = "";
     displayBooks();
+    bookTitle = 0;
+    bookAuthor = 0;
 }
 
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
 
-
-        let bookCard = document.createElement("div");
-        bookCard.className = "bookCard" 
+        const bookCard = document.createElement("div");
+        bookCard.id = "bookCard"; 
         document.querySelector(".container").appendChild(bookCard);
 
 
         let bookTitle = document.createElement("div");
-        bookTitle.className = "bookTitle"
-        bookTitle.innerHTML = myLibrary[i].title 
-        document.querySelector(".bookCard").appendChild(bookTitle);
+        bookTitle.className = "bookTitle";
+        bookTitle.innerHTML = myLibrary[i].title ;
+        document.querySelector(".container").appendChild(bookTitle);
 
         let bookAuthor = document.createElement("div");
-        bookAuthor.className = "bookAuthor"
-        bookAuthor.innerHTML = myLibrary[i].author
-        document.querySelector(".bookCard").appendChild(bookAuthor);
+        bookAuthor.className = "bookAuthor";
+        bookAuthor.innerHTML = myLibrary[i].author;
+        document.querySelector(".container").appendChild(bookAuthor);
 
-        let readDiv = document.createElement("div");
-        readDiv.className = "readDiv";
-        document.querySelector(".bookCard").appendChild(readDiv);
+        
 
         let readBook = document.createElement("input");
         readBook.className = "readBook";
         readBook.type = "checkbox";
-        document.querySelector(".readDiv").appendChild(readBook);
+        document.querySelector(".container").appendChild(readBook);
 
-        let removeDiv = document.createElement("div");
-        removeDiv.className = "removeDiv";
-        document.querySelector(".bookCard").appendChild(removeDiv);
+        
 
         let removeBook = document.createElement("button");
         removeBook.className = "removeBook";
         removeBook.innerHTML = "Remove";
-        document.querySelector(".removeDiv").appendChild(removeBook);
+        document.querySelector(".container").appendChild(removeBook);
+
+        
+        myLibrary = [];
     }
+    
+    
 }

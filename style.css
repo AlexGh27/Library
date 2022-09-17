@@ -9,8 +9,8 @@ body {
     height: 800px;
     width: 1000px;
     border: 2px solid gray;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    
     
 }
 
@@ -18,6 +18,9 @@ body {
     height: 100px;
     width: 1000px;
     display: flex;
+    
+    align-items: center;
+    overflow: hidden;
 }
 
 .information {
@@ -35,39 +38,27 @@ body {
     width: 300px;
     height: 100px;
     background-color: blue;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bookAuthor {
     width: 300px;
     height: 100px;
     background-color: green;
-}
-
-.readDiv {
-    width: 200px;
-    height: 100px;
-    background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
 }
 
 .readBook {
     width: 20px;
     height: 20px;
+    margin-left: 80px;
 }
 
-.removeDiv {
-    width: 200px;
-    height: 100px;
-    background-color: cyan;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
+
 
 .removeBook {
     width: 120;
@@ -75,6 +66,7 @@ body {
     background-color: purple;
     border-radius: 10px;
     
+
 }
 
 .author {

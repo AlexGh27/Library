@@ -43,16 +43,21 @@ function displayBooks() {
         document.querySelector(".bookCard").appendChild(bookAuthor);
 
         let readDiv = document.createElement("div");
-        readDiv.className = "readDiv"
+        readDiv.className = "readDiv";
         document.querySelector(".bookCard").appendChild(readDiv);
 
-        let readStatus = document.createElement("input");
-        readStatus.setAttribute("type", "checkbox");
-        readStatus.querySelector(".readDiv").appendChild(readStatus);
+        let readBook = document.createElement("input");
+        readBook.className = "readBook";
+        readBook.type = "checkbox";
+        document.querySelector(".readDiv").appendChild(readBook);
+
+        let removeDiv = document.createElement("div");
+        removeDiv.className = "removeDiv";
+        document.querySelector(".bookCard").appendChild(removeDiv);
 
         let removeBook = document.createElement("button");
-        removeBook.className = "removeBook"
-        removeBook.innerHTML = "Remove"
-        document.querySelector(".bookCard").appendChild(removeBook);
+        removeBook.className = "removeBook";
+        removeBook.innerHTML = "Remove";
+        document.querySelector(".removeDiv").appendChild(removeBook);
     }
 }

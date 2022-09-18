@@ -9,18 +9,21 @@ body {
     height: 800px;
     width: 1000px;
     border: 2px solid gray;
-    display: flex;
-    
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(1000, 100px);
+    justify-content: start;
+    align-items: start;
+    overflow: scroll;
+    gap: 0px;
 }
 
 .bookCard {
     height: 100px;
     width: 1000px;
     display: flex;
-    
     align-items: center;
-    overflow: hidden;
+    
 }
 
 .information {
@@ -41,6 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .bookAuthor {
@@ -50,12 +54,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .readBook {
     width: 20px;
     height: 20px;
     margin-left: 80px;
+    flex-shrink: 0;
+    margin-top: 40px;
 }
 
 
@@ -65,8 +72,9 @@ body {
     height: 30px;
     background-color: purple;
     border-radius: 10px;
-    
-
+    flex-shrink: 0;
+    margin-left: 160px;
+    margin-top: 40px;
 }
 
 .author {

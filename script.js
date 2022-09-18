@@ -26,40 +26,28 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-    for (let i = 0; i < myLibrary.length; i++) {
-
-        const bookCard = document.createElement("div");
-        bookCard.id = "bookCard"; 
-        document.querySelector(".container").appendChild(bookCard);
-
-
+        
         let bookTitle = document.createElement("div");
         bookTitle.className = "bookTitle";
-        bookTitle.innerHTML = myLibrary[i].title ;
+        bookTitle.innerHTML = myLibrary[myLibrary.length-1].title ;
         document.querySelector(".container").appendChild(bookTitle);
 
         let bookAuthor = document.createElement("div");
         bookAuthor.className = "bookAuthor";
-        bookAuthor.innerHTML = myLibrary[i].author;
+        bookAuthor.innerHTML = myLibrary[myLibrary.length-1].author;
         document.querySelector(".container").appendChild(bookAuthor);
-
-        
 
         let readBook = document.createElement("input");
         readBook.className = "readBook";
         readBook.type = "checkbox";
         document.querySelector(".container").appendChild(readBook);
 
-        
-
         let removeBook = document.createElement("button");
         removeBook.className = "removeBook";
         removeBook.innerHTML = "Remove";
         document.querySelector(".container").appendChild(removeBook);
 
-        
-        myLibrary = [];
-    }
-    
-    
 }
+
+let removeButton = document.querySelector(".removeBook");
+

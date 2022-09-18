@@ -26,28 +26,31 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-        
-        let bookTitle = document.createElement("div");
-        bookTitle.className = "bookTitle";
-        bookTitle.innerHTML = myLibrary[myLibrary.length-1].title ;
-        document.querySelector(".container").appendChild(bookTitle);
+    let bookCard = document.createElement("div");
+    bookCard.className = "bookCard";
+    document.querySelector(".container").appendChild(bookCard);      
 
-        let bookAuthor = document.createElement("div");
-        bookAuthor.className = "bookAuthor";
-        bookAuthor.innerHTML = myLibrary[myLibrary.length-1].author;
-        document.querySelector(".container").appendChild(bookAuthor);
+    let bookTitle = document.createElement("div");
+    bookTitle.className = "bookTitle";
+    bookTitle.innerHTML = myLibrary[myLibrary.length-1].title ;
+    document.querySelector(".bookCard").appendChild(bookTitle);
 
-        let readBook = document.createElement("input");
-        readBook.className = "readBook";
-        readBook.type = "checkbox";
-        document.querySelector(".container").appendChild(readBook);
+    let bookAuthor = document.createElement("div");
+    bookAuthor.className = "bookAuthor";
+    bookAuthor.innerHTML = myLibrary[myLibrary.length-1].author;
+    document.querySelector(".bookCard").appendChild(bookAuthor);
 
-        let removeBook = document.createElement("button");
-        removeBook.className = "removeBook";
-        removeBook.innerHTML = "Remove";
-        document.querySelector(".container").appendChild(removeBook);
+    let readBook = document.createElement("input");
+    readBook.className = "readBook";
+    readBook.type = "checkbox";
+    document.querySelector(".bookCard").appendChild(readBook);
 
+    let removeBook = document.createElement("button");
+    removeBook.className = "removeBook";
+    removeBook.innerHTML = "Remove";
+    document.querySelector(".bookCard").appendChild(removeBook);
+
+    
 }
 
-let removeButton = document.querySelector(".removeBook");
 

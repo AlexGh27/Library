@@ -10,7 +10,7 @@ body {
     width: 1000px;
     border: 2px solid gray;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1000px;
     grid-template-rows: repeat(1000, 100px);
     justify-content: start;
     align-items: start;

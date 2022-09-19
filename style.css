@@ -26,6 +26,14 @@ body {
     
 }
 
+.createdCard {
+    height: 100px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    
+}
+
 .information {
     height: 30px;
     width: 1000px;

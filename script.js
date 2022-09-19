@@ -25,10 +25,12 @@ function addBookToLibrary() {
     bookAuthor = 0;
 }
 
+
 function displayBooks() {
+
     let bookCard = document.createElement("div");
     bookCard.className = "bookCard";
-    document.querySelector(".container").appendChild(bookCard);      
+    document.querySelector(".container").appendChild(bookCard);   
 
     let bookTitle = document.createElement("div");
     bookTitle.className = "bookTitle";
@@ -50,7 +52,7 @@ function displayBooks() {
     removeBook.innerHTML = "Remove";
     document.querySelector(".bookCard").appendChild(removeBook);
 
-    
+    bookCard.className = "createdCard";
 }
 
 
